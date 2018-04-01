@@ -1972,7 +1972,8 @@ def EvalExponentialCdf(x, lam):
 
 
 def MakeExponentialPmf(lam, high, n=200):
-    """Makes a PMF discrete approx to an exponential distribution.
+    """
+    Makes a PMF discrete approx to an exponential distribution.
 
     lam: parameter lambda in events per unit time
     high: upper bound
@@ -2047,6 +2048,7 @@ def MakeParetoPmf(xm, alpha, high, num=101):
     ps = stats.pareto.pdf(xs, alpha, scale=xm)
     pmf = Pmf(dict(zip(xs, ps)))
     return pmf
+
 
 def StandardNormalCdf(x):
     """Evaluates the CDF of the standard Normal distribution.
