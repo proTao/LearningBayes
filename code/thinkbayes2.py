@@ -975,7 +975,7 @@ def MakeUniformPmf(low, high, n):
         pmf.Set(x, 1)
     pmf.Normalize()
     return pmf
-
+    
 
 class Cdf:
     """Represents a cumulative distribution function.
@@ -1396,12 +1396,6 @@ class Suite(Pmf):
     """Represents a suite of hypotheses and their probabilities."""
 
     def Update(self, data):
-        """Updates each hypothesis based on the data.
-
-        data: any representation of the data
-
-        returns: the normalizing constant
-        """
         for hypo in self.Values():
             like = self.Likelihood(data, hypo)
             self.Mult(hypo, like)
